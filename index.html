@@ -12,7 +12,7 @@
             max-width: 800px;
             margin: 40px auto;
             padding: 20px;
-            text-align: justify;
+            text-align: center;
         }
         img {
             width: 150px;
@@ -39,6 +39,9 @@
         }
         li {
             margin-bottom: 15px;
+        }
+        tt {
+            font-family: "Lucida Console", "Menlo", "Monaco", "Courier", monospace;
         }
         .description {
             color: grey;
@@ -73,10 +76,12 @@
 <body>
     <img src="/images/headshot.jpg" alt="Richard Michael Headshot">
     <h1>Richard Michael</h1>
-    
+    <p>
+        r.michael[at]posteo.net | <a href="https://github.com/RMichae1"> github </a> | <a href="https://scholar.google.com/citations?user=-U772ZIAAAAJ&hl=de">scholar</a> | <a href="/docs/cv_rm_24.pdf" target="_blank">CV</a> | <a href="https://bsky.app/profile/rdmichael.bsky.social">bsky</a>
+    </p>
     <section>
         <h2>About Me</h2>
-        <p>I'm a Ph.D. fellow in Computer Science (Machine Learning) at the University of Copenhagen (<a href="https://di.ku.dk/english/">DIKU</a>), supervised by 
+        <p style="text-align:justify;">I'm a Ph.D. fellow in Computer Science (Machine Learning) at the University of Copenhagen (<a href="https://di.ku.dk/english/">DIKU</a>), supervised by 
             <a href="https://scholar.google.com/citations?user=EwqU_jsAAAAJ&hl=de">Wouter Boomsma</a> at the KU <a href="https://ku-bioml.github.io">BioML</a> group. 
             I develop probabilistic models and optimization methods with applications in the experimental design of proteins and
             small molecules. 
@@ -87,11 +92,6 @@
             I'm a DDSA PhD grant holder for "Principled Bayesian Optimization and scientific ML for Pro-
             tein Engineering", my supervisor's group is part of the Center for <a href="https://mlls.dk">Basic Machine Learning Research in Life Science</a>  (MLLS), and I'm also a member of the <a href="https://www.aicentre.dk">Pioneer Centre for AI</a>, first PhD cohort.
         </p>
-    </section>
-    
-    <section>
-        <h2>Curriculum Vitae</h2>
-        <p><a href="/docs/cv_rm_24.pdf" target="_blank">CV</a></p>
     </section>
     
     <section>
@@ -114,11 +114,34 @@
         <h2>Research Outcomes</h2>
         <ul>
             <li>
+                <strong>Discrete Bayesian Optimization by Continuous Objective Relaxation - <a href="https://arxiv.org/abs/2404.17452">[Preprint]</a></strong><br />
+                R Michael, S Bartels, M González-Duque, Y Zainchkovskyy, J Frellsen, S Hauberg, W Boomsma . <i>arXiv 2024</i>.
+                <span class="toggle" onclick="toggleDropdown('dropdown1')">Code▼</span>
+                <div id="dropdown1" class="dropdown">
+                    <a href="https://github.com/MachineLearningLifeScience/corel">repository</a> [WIP]
+                    <p class="description">Stack: <tt>trieste, tensorflow, mlflow</tt></p>
+                </div>
+            </li>
+            <li>
+                <strong>A survey and benchmark of high-dimensional Bayesian optimization of discrete sequences - <a href="https://proceedings.neurips.cc/paper_files/paper/2024/hash/fe0007fcfd707673660ec0f9014bc48e-Abstract-Datasets_and_Benchmarks_Track.html">[Article]</a></strong><br />
+                M González-Duque, R Michael, S Bartels, Y Zainchkovskyy, S Hauberg, W Boomsma . <i>NeurIPS 2024, Datasets and Benchmarks Track</i>.
+                <span class="toggle" onclick="toggleDropdown('dropdown1')">Software & Docs ▼</span>
+                <div id="dropdown1" class="dropdown">
+                    <a href="https://machinelearninglifescience.github.io/hdbo_benchmark/">Project Website</a>
+                    <a href="https://github.com/MachineLearningLifeScience/poli"><i class="fab fa-github"></i>poli repository</a>
+                    <a href="https://machinelearninglifescience.github.io/poli-docs/#"><i class="fab fa-github"></i>Library documentation</a>
+                    <a href="https://github.com/MachineLearningLifeScience/poli-baselines"><i class="fab fa-github"></i>poli-baselines repository</a>
+                    <a href="https://github.com/MachineLearningLifeScience/hdbo_benchmark"><i class="fab fa-github"></i>hdbo repository</a>
+                    <p class="description">Stacks: <tt>torch, ax, wandb</tt></p>
+                </div>
+            </li>
+            <li>
                 <strong>A systematic analysis of regression models for protein engineering</strong> - <a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1012061">[Article]</a><br />
                 R Michael* , J Kæstel-Hansen* , P Mørch Groth, S Bartels, J Salomon, P Tian, N S Hatzakis, W Boomsma . <i>PLOS Computational Biology 2024</i>.
-                <span class="toggle" onclick="toggleDropdown('dropdown1')">Code & More ▼</span>
+                <span class="toggle" onclick="toggleDropdown('dropdown1')">Code & Preprint ▼</span>
                 <div id="dropdown1" class="dropdown">
                     <a href="https://github.com/MachineLearningLifeScience/protein_regression"><i class="fab fa-github"></i> repository</a>
+                    <p class="description">Stack: <tt>gpflow, tensorflow_probability, mlflow</tt> </p>
                     <a href="https://www.biorxiv.org/content/10.1101/2023.06.18.545472v2.abstract"><i class="far fa-file-alt"></i> bioRxiv</a>
                 </div>
             </li>
@@ -129,8 +152,17 @@
             <li>
                 <strong>Predictive Protein Property Modeling through Gaussian Processes and Encoding Methods</strong> - <a href="/publications/MSc_Thesis_Advanced_GP_modeling.pdf">[PDF]</a> <br />
                 R Michael . <i> MSc thesis (Cand.Sci.), University of Copenhagen, 2021 </i>. 
+                <span class="toggle" onclick="toggleDropdown('dropdown1')">Code ▼</span>
+                <div id="dropdown1" class="dropdown">
+                    <a href="https://github.com/RMichae1/pro_tooling"><i class="fab fa-github"></i> repository</a>
+                    <p class="description">Stack: <tt>torch, pyro, biopython, matlab</tt></p>
+                </div>
             </li>
         </ul>
     </section>
+    <!-- <section>
+        <h2>Interests</h2>
+        <p>Trail running (DTM'24), Triathlon (IM, Hamburg'23)</p>
+    </section> -->
 </body>
 </html>
