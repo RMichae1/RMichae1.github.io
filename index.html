@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Richard Michael</title>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <style>
         body {
             font-family: 'Raleway', sans-serif;
             max-width: 800px;
             margin: 40px auto;
             padding: 20px;
-            text-align: center;
+            text-align: justify;
         }
         img {
             width: 150px;
@@ -43,6 +44,30 @@
             color: grey;
             font-size: 0.9em;
         }
+        .dropdown {
+            display: none;
+            margin-top: 5px;
+        }
+        .dropdown a {
+            display: block;
+            padding: 5px 0;
+        }
+        .toggle {
+            cursor: pointer;
+            color: #0077cc;
+            font-size: 0.9em;
+        }
+    </style>
+    <script>
+        function toggleDropdown(id) {
+            var dropdown = document.getElementById(id);
+            if (dropdown.style.display === "none" || dropdown.style.display === "") {
+                dropdown.style.display = "block";
+            } else {
+                dropdown.style.display = "none";
+            }
+        }
+    </script>
     </style>
 </head>
 <body>
@@ -82,7 +107,7 @@
                     Collaboration with the <a href="https://www.hatzakislab.com">Hatzakis Lab</a>.</p>
             </li>
             <li>
-                <strong>Protein Engineering as Stochastic, Adversarial Bandit Problem with Domain Model Likelihoods </strong> - <a href="/publications/proteins_are_bandits.pdf">[Working Draft]</a><br />
+                <strong>Protein Engineering as Stochastic, Adversarial Bandit Problem with PLMs</strong> - <a href="/publications/proteins_are_bandits.pdf">[Working Draft]</a><br />
                 <p class="description">Status: initialized collaboration with Junghyun Lee at OptiML Lab, KAIST.</p>
             </li>
         </ul>
@@ -91,6 +116,11 @@
             <li>
                 <strong>A systematic analysis of regression models for protein engineering</strong> - <a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1012061">[Article]</a><br />
                 R Michael* , J Kæstel-Hansen* , P Mørch Groth, S Bartels, J Salomon, P Tian, N S Hatzakis, W Boomsma . <i>PLOS Computational Biology 2024</i>.
+                <span class="toggle" onclick="toggleDropdown('dropdown1')">Code & More ▼</span>
+                <div id="dropdown1" class="dropdown">
+                    <a href="https://github.com/MachineLearningLifeScience/protein_regression"><i class="fab fa-github"></i> repository</a>
+                    <a href="https://www.biorxiv.org/content/10.1101/2023.06.18.545472v2.abstract"><i class="far fa-file-alt"></i> bioRxiv</a>
+                </div>
             </li>
             <li>
                 <strong>FLOP: Tasks for fitness landscapes of protein wildtypes</strong> - <a href="https://www.biorxiv.org/content/10.1101/2023.06.21.545880v2.abstract">[Preprint]</a><br />
