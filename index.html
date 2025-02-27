@@ -28,8 +28,20 @@
             color: #0077cc;
             font-weight: 400;
         }
+        section {
+            margin: 40px 0;
+        }
         ul {
-        list-style: none;
+            list-style: none;
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 15px;
+        }
+        .description {
+            color: grey;
+            font-size: 0.9em;
         }
     </style>
 </head>
@@ -39,7 +51,17 @@
     
     <section>
         <h2>About Me</h2>
-        <p>Brief description about your research interests, background, and expertise.</p>
+        <p>I'm a Ph.D. fellow in Computer Science (Machine Learning) at the University of Copenhagen (<a href="https://di.ku.dk/english/">DIKU</a>), supervised by 
+            <a href="https://scholar.google.com/citations?user=EwqU_jsAAAAJ&hl=de">Wouter Boomsma</a> at the KU <a href="https://ku-bioml.github.io">BioML</a> group. 
+            I develop probabilistic models and optimization methods with applications in the experimental design of proteins and
+            small molecules. 
+            My previous work includes supervised learning for protein function prediction, assesses protein representations in the context of engineering, and high-dimensional Bayesian optimization for discrete inputs. 
+            Currently, I investigate active learning for out-of-distribution generalization related to protein function
+            landscapes.
+            My background is in Bioinformatics with a prior in Cognitive Science.
+            I'm a DDSA PhD grant holder for "Principled Bayesian Optimization and scientific ML for Pro-
+            tein Engineering", my supervisor's group is part of the Center for <a href="https://mlls.dk">Basic Machine Learning Research in Life Science</a>  (MLLS), and I'm also a member of the <a href="https://www.aicentre.dk">Pioneer Centre for AI</a>, first PhD cohort.
+        </p>
     </section>
     
     <section>
@@ -50,25 +72,32 @@
     <section>
         <h2>Ongoing Projects</h2>
         <ul>
-            <li>Active Learning of Protein Functions - [WIP]</li>
-            <li>Optimal experimental lead design - </li>
             <li>
-                Protein Engineering as Stochastic, Adversarial Bandit Problem with Domain Model Likelihoods - <a href="/publications/proteins_are_bandits.pdf">[Working Draft]</a><br />
-                Status: initialized collaboration with Junghyun Lee at OptiML Lab, KAIST.
+                <strong>Active Learning of higher-order protein functions </strong> - [WIP]
+                <p class="description">Status: Running Bayesian AL experiments on refined task formulations with collaborators and guidance from the <a href="https://rainml.uk/rainml/RainML-Rainforth-Machine-Learning-Research-Lab-a0b0e08316964f0c9329c936f3e2b9a8">RainML</a> group, OxCSML.</p>
+            </li>
+            <li>
+                <strong>Optimal experimental design for lead libraries</strong> - [WIP]
+                <p class="description">Status: Computing <i>D<sub>s</sub>-optimal</i> ligand libraries from dose-response curves toward three target enzymes for iterative lead-refinement. 
+                    Collaboration with the <a href="https://www.hatzakislab.com">Hatzakis Lab</a>.</p>
+            </li>
+            <li>
+                <strong>Protein Engineering as Stochastic, Adversarial Bandit Problem with Domain Model Likelihoods </strong> - <a href="/publications/proteins_are_bandits.pdf">[Working Draft]</a><br />
+                <p class="description">Status: initialized collaboration with Junghyun Lee at OptiML Lab, KAIST.</p>
             </li>
         </ul>
         <h2>Research Outcomes</h2>
         <ul>
             <li>
-                A systematic analysis of regression models for protein engineering <a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1012061">[Article]</a><br />
+                <strong>A systematic analysis of regression models for protein engineering</strong> - <a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1012061">[Article]</a><br />
                 R Michael* , J Kæstel-Hansen* , P Mørch Groth, S Bartels, J Salomon, P Tian, N S Hatzakis, W Boomsma . <i>PLOS Computational Biology 2024</i>.
             </li>
             <li>
-                FLOP: Tasks for fitness landscapes of protein wildtypes - <a href="https://www.biorxiv.org/content/10.1101/2023.06.21.545880v2.abstract">[Preprint]</a><br />
+                <strong>FLOP: Tasks for fitness landscapes of protein wildtypes</strong> - <a href="https://www.biorxiv.org/content/10.1101/2023.06.21.545880v2.abstract">[Preprint]</a><br />
                 P Mørch Groth , R Michael , J Salomon , P Tian , W Boomsma . <i> bioRxiv 2024 </i>.
             </li>
             <li>
-                Predictive Protein Property Modeling through Gaussian Processes and Encoding Methods - <a href="/publications/MSc_Thesis_Advanced_GP_modeling.pdf">[PDF]</a> <br />
+                <strong>Predictive Protein Property Modeling through Gaussian Processes and Encoding Methods</strong> - <a href="/publications/MSc_Thesis_Advanced_GP_modeling.pdf">[PDF]</a> <br />
                 R Michael . <i> MSc thesis (Cand.Sci.), University of Copenhagen, 2021 </i>. 
             </li>
         </ul>
